@@ -1,0 +1,308 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A8892D5D-B1C8-46B1-B560-C55D4A416DBA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TVSScales</RootNamespace>
+    <AssemblyName>TVSScales</AssemblyName>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="ActiveReports.Design3, Version=5.2.1132.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff" />
+    <Reference Include="ActiveReports.PdfExport, Version=5.2.1132.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff" />
+    <Reference Include="ActiveReports.Viewer3, Version=5.2.1132.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff" />
+    <Reference Include="ActiveReports.XlsExport, Version=5.2.1132.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff" />
+    <Reference Include="ActiveReports3, Version=5.2.1132.1, Culture=neutral, PublicKeyToken=cc4967777c49a3ff" />
+    <Reference Include="AForge.Controls, Version=2.1.5.0, Culture=neutral, PublicKeyToken=a8ac264d1dc6b9d9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Administrator\Desktop\Two Cameras Test\bin\Debug\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.1.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Administrator\Desktop\Two Cameras Test\bin\Debug\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.1.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Administrator\Desktop\Two Cameras Test\bin\Debug\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1TrueDBGrid.2, Version=2.0.20072.61122, Culture=neutral, PublicKeyToken=75ae3fb0e2b1e0da, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SoftWareTool\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\clsConfigXML.cs" />
+    <Compile Include="Class\clsPublic.cs" />
+    <Compile Include="Class\clsGridView.cs" />
+    <Compile Include="Form\frmSEM1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmSEM1.designer.cs">
+      <DependentUpon>frmSEM1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmSEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmSEM.designer.cs">
+      <DependentUpon>frmSEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmPictures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmPictures.designer.cs">
+      <DependentUpon>frmPictures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmCongif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmCongif.designer.cs">
+      <DependentUpon>frmCongif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmDir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmDir.designer.cs">
+      <DependentUpon>frmDir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTVSMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTVSMain.Designer.cs">
+      <DependentUpon>frmTVSMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form\frmSEM1.resx">
+      <DependentUpon>frmSEM1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmSEM.resx">
+      <DependentUpon>frmSEM.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmPictures.resx">
+      <DependentUpon>frmPictures.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmCongif.resx">
+      <DependentUpon>frmCongif.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmDir.resx">
+      <DependentUpon>frmDir.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTVSMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmTVSMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptBill88Logo.resx">
+      <DependentUpon>rptBill88Logo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptBill65Logo.resx">
+      <DependentUpon>rptBill65Logo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptBill47Logo.resx">
+      <DependentUpon>rptBill47Logo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptBill65Logo_.resx">
+      <DependentUpon>rptBill65Logo_.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptBill88Logo_.resx">
+      <DependentUpon>rptBill88Logo_.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptBill47.resx">
+      <DependentUpon>rptBill47.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmBarrCodeReport.resx">
+      <DependentUpon>frmBarrCodeReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptBill65.resx">
+      <DependentUpon>rptBill65.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptBill88.resx">
+      <DependentUpon>rptBill88.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptList.resx">
+      <DependentUpon>rptList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmSearch.resx">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmReportViewer.resx">
+      <DependentUpon>frmReportViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reports\clsReports.cs" />
+    <Compile Include="Reports\rptBill88Logo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptBill88Logo.designer.cs">
+      <DependentUpon>rptBill88Logo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptBill65Logo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptBill65Logo.designer.cs">
+      <DependentUpon>rptBill65Logo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptBill47Logo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptBill47Logo.designer.cs">
+      <DependentUpon>rptBill47Logo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptBill65Logo_.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptBill65Logo_.designer.cs">
+      <DependentUpon>rptBill65Logo_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptBill88Logo_.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptBill88Logo_.designer.cs">
+      <DependentUpon>rptBill88Logo_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptBill47.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptBill47.designer.cs">
+      <DependentUpon>rptBill47.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmBarrCodeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmBarrCodeReport.designer.cs">
+      <DependentUpon>frmBarrCodeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptBill65.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptBill65.designer.cs">
+      <DependentUpon>rptBill65.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptBill88.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptBill88.designer.cs">
+      <DependentUpon>rptBill88.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptList.designer.cs">
+      <DependentUpon>rptList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmSearch.designer.cs">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmReportViewer.designer.cs">
+      <DependentUpon>frmReportViewer.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.ico" />
+    <None Include="Resources\45.png" />
+    <None Include="Resources\Key.png" />
+    <None Include="Resources\Login.gif" />
+    <None Include="Resources\acc.png" />
+    <None Include="Resources\about.png" />
+    <None Include="Resources\TV.png" />
+    <None Include="Resources\Add.png" />
+    <None Include="Resources\Delete.png" />
+    <None Include="Resources\Save.png" />
+    <None Include="Resources\Load.png" />
+    <None Include="Resources\PRINT.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\Exit.png" />
+    <None Include="Resources\TVS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TVSSys\TVSSys.csproj">
+      <Project>{69128CB3-3D96-4768-AB69-CB7334C4C344}</Project>
+      <Name>TVSSys</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
